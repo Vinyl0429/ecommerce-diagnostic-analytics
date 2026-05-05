@@ -7,8 +7,8 @@ Dự án này được thực hiện nhằm bóc tách các lớp dữ liệu v�
 
 ## 🛠 Tech Stack
 - **Database:** SQL Server (Window Functions, CTEs, Data Aggregation)
-- **Data Visualization:** Power BI (DAX, Star Schema, UI/UX Design)
-- **Analytical Frameworks:** MECE, B.A.D Framework, RFM Model, Cohort Analysis
+- **Data Visualization:** Power BI
+- **Analytical Frameworks:** MECE, RFM Model, Cohort Analysis
 
 ## 📂 Cấu trúc Repository
 - `/01_Dataset_Info`: Từ điển dữ liệu (Data Dictionary) và cấu trúc ERD.
