@@ -11,9 +11,9 @@ Dự án này được thực hiện nhằm bóc tách các lớp dữ liệu v�
 - **Analytical Frameworks:** MECE, RFM Model, Cohort Analysis
 
 ## 📂 Cấu trúc Repository
-- `/01_Dataset_Info`: Từ điển dữ liệu (Data Dictionary) và cấu trúc ERD.
-- `/02_SQL_Queries`: Truy vấn SQL.
-- 
+- `/dataset_info`: Từ điển dữ liệu (Data Dictionary) và quá trình kiểm tra, làm sạch dữ liệu.
+- `/sql_queries`: Truy vấn SQL.
+
 ## 🚀 Key Insights & Đề xuất chiến lược
 1. **Discount Cannibalization:** Phát hiện "Điểm gãy lợi nhuận" ở mức giảm giá 21%. Đề xuất thiết lập trần giảm giá (Max-cap) tự động ở mức 20%.
 2. **Customer Segmentation:** Đánh giá lại giá trị tập khách hàng B2B, thay đổi KPI từ "Biên lợi nhuận đơn hàng" sang "Customer Lifetime Value" (CLTV: $208/khách).
