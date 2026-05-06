@@ -42,7 +42,7 @@ Hệ thống dữ liệu của Xóm E-Com được tôi quy hoạch và mô hìn
 
 ## 2. QUY TRÌNH KIỂM ĐỊNH VÀ LÀM SẠCH DỮ LIỆU (DATA QUALITY & CLEANING)
 
-Trước khi tiến hành phân tích chẩn đoán, toàn bộ tập dữ liệu đã được kiểm tra tính toàn vẹn (Data Integrity) thông qua các truy vấn SQL. Trong quá trình rà soát **Khóa ngoại (Foreign Key Constraints)**, tôi đã phát hiện và xử lý các điểm bất thường sau:
+Trước khi tiến hành phân tích chẩn đoán, toàn bộ tập dữ liệu đã được kiểm tra tính toàn vẹn (Data Integrity) thông qua các truy vấn SQL. Trong quá trình rà soát **Khóa ngoại**, tôi đã phát hiện và xử lý các điểm bất thường sau:
 
 *   **Vấn đề:** Tồn tại các bản ghi giao dịch (Sales) chứa mã sản phẩm (`PPP000002`, `PPP000010`) và mã khu vực (`RRR0001`) không khớp với bất kỳ dữ liệu nào trong các bảng Dimension tương ứng (`Dim_Product`, `Dim_Region`). Điều này tạo ra các "dữ liệu mồ côi" (Orphaned records) có thể gây sai lệch khi Drill-down.
 *   **Đánh giá bản chất:** Dựa trên các phép kiểm định, lỗi này được phân loại thuộc nhóm **MCAR (Missing Completely At Random)**.
