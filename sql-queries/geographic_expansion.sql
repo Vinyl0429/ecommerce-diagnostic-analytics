@@ -217,7 +217,6 @@ customer_orders AS (
     FROM #ecom_sales_clean
     GROUP BY customer_id
 )
--- SELECT cuối giữ nguyên...
 SELECT
     fp.first_category,
     COUNT(*)                                          AS total_customers,
