@@ -403,12 +403,6 @@ select
 from retained_customers
 order by cohort_year, period;
 
-select *
-from #ecom_sales_clean
-where order_id = 'CA-2012-AA10315140-40998'
-order by order_id;
--- discount tính theo line-items
-
 --- LTV by discount
 with customer_base as(
     select
@@ -493,7 +487,7 @@ from customer_classification
 group by is_discount_cust;
 
 
---- pct of customer discoutn
+--- pct of customer discount
 with first_orders as (
     select
         customer_id,
@@ -522,6 +516,17 @@ from customer_classification
 group by cohort_year
 order by cohort_year
 
+
+-- =========================================================
+-- RFM DISTRIBUTION ANALYSIS
+-- Phân tích phân phối dữ liệu Recency / Frequency / Monetary
+-- nhằm:
+-- 1. Hiểu hành vi tổng quan của khách hàng
+-- 2. Xác định mức độ lệch phân phối (skewness)
+-- 3. Hỗ trợ xây dựng threshold cho RFM scoring
+-- =========================================================
+
+  
 WITH rfm_base AS (
     -- Gói gọn việc tính toán R, F, M vào CTE để tái sử dụng, giúp code sạch hơn
     SELECT
